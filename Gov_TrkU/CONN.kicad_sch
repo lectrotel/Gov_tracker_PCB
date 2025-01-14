@@ -1741,9 +1741,9 @@
     (property "Datasheet" "http://www.fairchildsemi.com/ds/BC/BC817.pdf" (at 66.04 120.65 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (pin "3" (uuid 7c97f003-1b6e-4100-8430-f2803631da0e))
     (pin "1" (uuid ab0e3430-aa49-41ff-8ac7-3053fc144dc9))
     (pin "2" (uuid dccd7ee5-f94f-48dd-93cc-e80e0e859a66))
+    (pin "3" (uuid 7c97f003-1b6e-4100-8430-f2803631da0e))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -1820,8 +1820,8 @@
     (property "Datasheet" "~" (at 113.792 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 1c62ab49-4fba-438e-b3ff-35d86066e0e8))
     (pin "1" (uuid 79a21290-f104-4b56-b041-eb64ef733314))
+    (pin "2" (uuid 1c62ab49-4fba-438e-b3ff-35d86066e0e8))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -1846,8 +1846,8 @@
     (property "Datasheet" "~" (at 179.07 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid d156773e-2d8b-4d0d-8450-2a6c4589fd36))
     (pin "1" (uuid f5afb366-79bb-48ad-9861-152859e1a67d))
+    (pin "2" (uuid d156773e-2d8b-4d0d-8450-2a6c4589fd36))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2023,10 +2023,10 @@
     (property "Datasheet" "~" (at 214.122 123.698 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "4" (uuid 18c283f7-595c-4af2-9618-b134b01e85a1))
-    (pin "2" (uuid 703370af-6946-4d51-9423-579e0571d2ec))
     (pin "1" (uuid e37e0b4b-a421-4e70-aece-1175350278fe))
+    (pin "2" (uuid 703370af-6946-4d51-9423-579e0571d2ec))
     (pin "3" (uuid 64a34316-68e2-4054-a984-415f20189f17))
+    (pin "4" (uuid 18c283f7-595c-4af2-9618-b134b01e85a1))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2126,8 +2126,8 @@
     (property "Datasheet" "~" (at 125.476 49.784 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 21546ad8-61ca-450b-af48-cbd8a1e38996))
     (pin "1" (uuid ca4bda5d-831a-4dcb-9a72-ac228309fe16))
+    (pin "2" (uuid 21546ad8-61ca-450b-af48-cbd8a1e38996))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2152,8 +2152,8 @@
     (property "Datasheet" "~" (at 139.192 64.262 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 489eccf4-da96-45aa-b206-f7b187e53096))
     (pin "1" (uuid 86ec0c43-ff94-4b18-ba8c-d2e0512064f9))
+    (pin "2" (uuid 489eccf4-da96-45aa-b206-f7b187e53096))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2281,9 +2281,9 @@
     (pin "1" (uuid b5575895-d52a-443a-a021-a09ee92c2d6f))
     (pin "2" (uuid cfbe56c9-1b05-40d2-88fa-7d320597dbe2))
     (pin "3" (uuid 8391e93e-a2d0-4f8e-90c9-5ee5eb6517d2))
+    (pin "4" (uuid a2c7c63a-be2a-4614-a443-29bc52d2bcd4))
     (pin "5" (uuid ace2b2c9-c844-4e6f-baac-bf285c2deabf))
     (pin "6" (uuid 07bc1dc9-a65f-4ab7-8507-f0bfff1e8e16))
-    (pin "4" (uuid a2c7c63a-be2a-4614-a443-29bc52d2bcd4))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2308,8 +2308,8 @@
     (property "Datasheet" "~" (at 59.944 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 3146c118-8f55-4b45-be56-9b2f538d30d7))
     (pin "1" (uuid 0fdd3fa7-0338-45ec-b734-74155b47c3f1))
+    (pin "2" (uuid 3146c118-8f55-4b45-be56-9b2f538d30d7))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2664,8 +2664,8 @@
     (property "Datasheet" "~" (at 72.644 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 30f43e79-28ee-43a7-8848-7962374388aa))
     (pin "1" (uuid 293f4401-87b5-4e3b-9dfb-679298f27096))
+    (pin "2" (uuid 30f43e79-28ee-43a7-8848-7962374388aa))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2767,8 +2767,8 @@
     (property "Datasheet" "~" (at 108.204 63.754 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid f1726d31-be37-475a-a9ae-3fed2dd71eec))
     (pin "1" (uuid 80dcb9ef-df4d-4dc1-a567-9f2064e420b1))
+    (pin "2" (uuid f1726d31-be37-475a-a9ae-3fed2dd71eec))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -2919,24 +2919,24 @@
     (property "Datasheet" "~" (at 231.14 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "15" (uuid 409e0737-fe85-42e5-a9e0-212045dcdde0))
     (pin "1" (uuid 3edab94c-7949-405c-913b-26c2aef1af8e))
+    (pin "10" (uuid 97144f55-6bd7-49dd-ac56-c363ac770c98))
+    (pin "11" (uuid 173364a4-672a-4a90-b149-6f232709a87a))
+    (pin "12" (uuid 5dde7077-be5d-4017-b89c-913152ab28e9))
     (pin "13" (uuid 28d85922-695f-4af6-885e-35a88e32700b))
+    (pin "14" (uuid 7a243c30-1176-43fb-8dd1-ea74e83a7b95))
+    (pin "15" (uuid 409e0737-fe85-42e5-a9e0-212045dcdde0))
     (pin "16" (uuid d860c41e-171b-4208-abfc-73eaa81971c9))
     (pin "17" (uuid 6da7db1d-3269-4712-9a46-7592a1037a42))
     (pin "18" (uuid 1bf7df61-00d4-4afe-988a-95231ddf05a3))
     (pin "2" (uuid ae7fa4c8-d9c8-4a04-bf70-d23db2b076c0))
-    (pin "10" (uuid 97144f55-6bd7-49dd-ac56-c363ac770c98))
-    (pin "12" (uuid 5dde7077-be5d-4017-b89c-913152ab28e9))
-    (pin "11" (uuid 173364a4-672a-4a90-b149-6f232709a87a))
-    (pin "14" (uuid 7a243c30-1176-43fb-8dd1-ea74e83a7b95))
-    (pin "9" (uuid 17b11275-a035-4c9e-a96d-23ee69767aa2))
-    (pin "8" (uuid aeb6f637-b311-40cf-a897-6201e33b0a4a))
-    (pin "7" (uuid 134c02ec-d8b3-4c06-a77f-f21634b21f85))
+    (pin "3" (uuid 50eec040-3779-418e-abb8-207abbf4a343))
     (pin "4" (uuid 1979ca44-7d3a-4654-baec-257855061d53))
     (pin "5" (uuid 61bce70a-c3cb-44cc-a9ba-01b93c98d85d))
     (pin "6" (uuid 59b4f9b1-0731-49be-a92e-30ff6417300b))
-    (pin "3" (uuid 50eec040-3779-418e-abb8-207abbf4a343))
+    (pin "7" (uuid 134c02ec-d8b3-4c06-a77f-f21634b21f85))
+    (pin "8" (uuid aeb6f637-b311-40cf-a897-6201e33b0a4a))
+    (pin "9" (uuid 17b11275-a035-4c9e-a96d-23ee69767aa2))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
@@ -3037,8 +3037,8 @@
     (property "Datasheet" "~" (at 88.392 64.262 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid c8eab5e1-eff8-4ed7-9fb2-08755a3aa817))
     (pin "1" (uuid 9986cba8-c239-41d8-953a-2106729aa195))
+    (pin "2" (uuid c8eab5e1-eff8-4ed7-9fb2-08755a3aa817))
     (instances
       (project "Gov_Tracker"
         (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd/433c3647-3173-4b55-b9ef-1138ef48d4d1"
