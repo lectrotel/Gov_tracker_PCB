@@ -1,0 +1,46 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4050 980  1600 2010
+U 6129E1BD
+F0 "Sheet6129E1BC" 50
+F1 "Power.sch" 50
+$EndSheet
+$Sheet
+S 4050 3190 1600 1780
+U 612BC04C
+F0 "Sheet612BC04B" 50
+F1 "Gprs_Gps.sch" 50
+$EndSheet
+$Sheet
+S 4050 5190 1600 1700
+U 612BC197
+F0 "Sheet612BC196" 50
+F1 "STM32F105VCT.sch" 50
+$EndSheet
+$Sheet
+S 5950 990  1500 2000
+U 616FBD56
+F0 "Sheet616FBD55" 50
+F1 "Controls.sch" 50
+$EndSheet
+$Sheet
+S 6090 3460 1080 1020
+U 61837732
+F0 "Sheet61837731" 50
+F1 "file61837731.sch" 50
+$EndSheet
+$EndSCHEMATC

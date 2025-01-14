@@ -1,0 +1,178 @@
+uint8_t setup_tcp_connection(){
+
+	char temp_data[64];
+	uint8_t length;
+	//if(!t_configured) return 0;
+
+			//Checking registration status...
+			if (checkNetworkState()){
+
+				//Manual receive mode
+				if (send_gsm_cmd("AT+CIPRXGET=1", sizeof("AT+CIPRXGET=1"),"OK\r\n",20)) {
+				}
+
+				if(send_gsm_cmd("AT+CGATT=1",sizeof("AT+CGATT=1"), "OK\r\n", 3000)){
+					debug_out(" Attached to network  \r\n");
+					//Setting for multiconnection.
+					if(send_gsm_cmd("AT+CIPMUX=1",sizeof("AT+CIPMUX=1"), "OK\r\n", 300));
+
+					if(send_gsm_cmd("AT+CIPSHUT",sizeof("AT+CIPSHUT"), "SHUT OK", 300)) debug_out(" Gprs shut \r\n");
+
+					length = snprintf(temp_data,64,"AT+CSTT=\"%s\",\"%s\",\"%s\"\r",APN,APN_user,APN_password);
+					//length = snprintf(temp_data,64,"AT+CSTT=\"safaricom\",\"saf\",\"1234\"\r");
+					if(send_gsm_cmd(temp_data,length, "OK\r\n", 300)){
+						debug_out("AT+CSTT APN set ok \r\n");
+					}
+					if(send_gsm_cmd("AT+CIICR",sizeof("AT+CIICR"), "OK\r\n", 7000)) {
+						debug_out(" GPRS brought Up successfuly \r\n");
+						if(send_gsm_cmd("AT+CIFSR",sizeof("AT+CIFSR"), "ERROR", 3000)) {
+							debug_out("LOCAL IP not ISSUED \r\n");
+							return 0;
+						}else{
+							debug_out("LOCAL IP ISSUED \r\n");
+							return 1;
+						}
+
+
+					}
+					else {
+						debug_out(" AT+CIICR not set \r\n");
+
+					}
+
+				}
+
+			}
+
+	return 0;
+}
+
+
+
+
+
+len = snprintf((char *)dat,64,"AT+CIPSTART=0,\"TCP\",\"%s\",\"%u\"\r",main_tcp_conn.domain,main_tcp_conn.port);
+						//len = snprintf((char *)dat,64,"AT+CIPSTART=0,\"TCP\",\"soldier.cloudmqtt.com\",\"15649\"\r");
+						//len = snprintf((char *)dat,64,"AT+CIPSTART=0,\"TCP\",\"172.105.53.253\",\"7810\"\r");
+						if(send_gsm_cmd(dat,len,"CONNECT OK",300)){
+
+							debug_out("IP port opened successfuly \r\n");
+
+						}else {
+							debug_out("Port opening failed\r\n");
+							gprsDatSnd_failed_count ++;
+						}
+
+					}
+
+
+
+
+uint8_t get_gsm_tcp_status(int time_to_wait) {
+
+	 uint8_t delim_postns[20] = {0};
+	 uint8_t pstn[20];
+	 uint8_t stat_max = 64; //max value for array was 32
+	 uint8_t _stat[stat_max];
+	 char *vr;
+
+	 readDataBufPtr = 0; //reset the bufferpointer
+	 memset(&gsm_data_buf[0], 0, Read_data_MAX-1);
+	 gprs_uart6_send((uint8_t *)"AT+CIPSTATUS \r",sizeof("AT+CIPSTATUS \r"));
+
+	state = satateIdle;
+
+	gsm_ticks = 0; //reset the timer
+	while (gsm_ticks < time_to_wait){  //Do this before timer expires
+
+
+		while(gprs_uart6_test()){
+			if(readDataBufPtr < Read_data_MAX) {
+				gsm_data_buf[readDataBufPtr++] = gprs_uart6_getc();
+			}else readDataBufPtr = 0;
+			state = satateMessageReceived;
+			delay(10);
+		}
+
+		if (state == satateMessageReceived){
+			//split the result data
+			split_str2_delim((uint8_t *)gsm_data_buf,'\r','\n',Read_data_MAX,delim_postns);
+
+			read_str_from_str((uint8_t *)gsm_data_buf,_stat,stat_max,(delim_postns[2]),(delim_postns[3]));
+
+
+			if(strstr((char *)_stat,"IP INTIAL")){
+				ip_conn_state = IP_INITIAL;
+			}else if(strstr((char *)_stat,"IP START")){
+				ip_conn_state = IP_START;
+			}else if(strstr((char *)_stat,"IP CONFIG")){
+				ip_conn_state = IP_CONFIG;
+			}else if(strstr((char *)_stat,"IP GPRSACT")){
+				ip_conn_state = IP_GPRSACT;
+			}else if(strstr((char *)_stat,"IP STATUS")){
+				ip_conn_state = IP_STATUS;
+			}else if(strstr((char *)_stat,"IP PROCESSING")){
+				ip_conn_state = IP_PROCESSING;
+			}else if(strstr((char *)_stat,"PDP DEACT")){
+				ip_conn_state = PDP_DEACT;
+			}
+
+			//Check status of connection 1
+
+			//Check connection 1 delim_postns[6] split further.
+			vr = &gsm_data_buf[delim_postns[4]];
+			split_str((uint8_t *)vr, ',',delim_postns[5]-delim_postns[4], pstn);
+			read_str_from_str((uint8_t *)gsm_data_buf,_stat,stat_max,(delim_postns[4]+pstn[4]),(delim_postns[5]));
+			if(strstr((char *)_stat,"INITIAL")){
+				main_tcp_conn.state = INITIAL;
+			}else if(strstr((char *)_stat,"CONNECTING")){
+				main_tcp_conn.state = CONNECTING;
+			}else if(strstr((char *)_stat,"CONNECTED")){
+				main_tcp_conn.state = CONNECTED;
+			}else if(strstr((char *)_stat,"REMOTE CLOSING")){
+				main_tcp_conn.state = REMOTE_CLOSING;
+			}else if(strstr((char *)_stat,"CLOSING")){
+				main_tcp_conn.state = CLOSING;
+			}else if(strstr((char *)_stat,"CLOSED")){
+				main_tcp_conn.state = CLOSED;
+			}
+
+			//update the connection status register with the result
+			state = satateIdle;
+			//string manipulations
+
+
+
+		}
+
+	}
+	readDataBufPtr = 0;
+	return 0;
+
+}
+
+
+
+
+
+
+
+////////////////////////////////////gps///////////////////////////////////////
+
+
+
+
+
+uint32_t sim868_gps_init(){
+
+	if (send_pmtk_cmd("$PMTK353,1,1,0,0,0*2B\r\n", sizeof("$PMTK353,1,1,0,0,0*2B\r\n"),"PMTK001,353",200)) {
+			debug_out("send only gps+glonass messages \r\n");
+		}
+
+	if (send_pmtk_cmd("$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*28\r\n",
+			sizeof("$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*28\r\n"),"PMTK001,314",200)) {
+			debug_out("//output only RMC and GGA messages\r\n");
+		}
+
+	return 1;
+}

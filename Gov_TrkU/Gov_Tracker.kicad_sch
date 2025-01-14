@@ -1,0 +1,116 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 0a6d6671-8aa0-46d3-9014-f71c78cbf6dd)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 102.87 24.892) (size 40.64 51.054) (fields_autoplaced)
+    (stroke (width 0) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-00006129e1bd)
+    (property "Sheetname" "POWER" (at 102.87 24.1804 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Power.kicad_sch" (at 102.87 76.5306 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 102.87 81.026) (size 40.64 45.212) (fields_autoplaced)
+    (stroke (width 0) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-0000612bc04c)
+    (property "Sheetname" "COMMUNICATION" (at 102.87 80.3144 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Gprs_Gps.kicad_sch" (at 102.87 126.8226 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 102.87 131.826) (size 40.64 43.18) (fields_autoplaced)
+    (stroke (width 0) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-0000612bc197)
+    (property "Sheetname" "GOVERNOR" (at 102.87 131.1144 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "STM32F105VCT.kicad_sch" (at 102.87 175.5906 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 151.13 25.146) (size 38.1 50.8) (fields_autoplaced)
+    (stroke (width 0) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-0000616fbd56)
+    (property "Sheetname" "FLASH_CAN_PRINTER" (at 151.13 24.4344 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Controls.kicad_sch" (at 151.13 76.5306 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 154.686 87.884) (size 27.432 25.908) (fields_autoplaced)
+    (stroke (width 0) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-000061837732)
+    (property "Sheetname" "TRACKER" (at 154.686 87.1724 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "file61837731.kicad_sch" (at 154.686 114.3766 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "6"))
+      )
+    )
+  )
+
+  (sheet (at 201.93 25.4) (size 31.75 48.26) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 433c3647-3173-4b55-b9ef-1138ef48d4d1)
+    (property "Sheetname" "CONN" (at 201.93 24.6884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "CONN.kicad_sch" (at 201.93 74.2446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Gov_Tracker"
+        (path "/0a6d6671-8aa0-46d3-9014-f71c78cbf6dd" (page "7"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

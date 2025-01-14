@@ -1,0 +1,55 @@
+STEP 1: Initialise Gps
+CMD: $PGKC115,1,0,0,0*2B
+
+STEP 2: Set the star search mode and save to flash
+CMD: $PGKC121,1,0,0,0*2C
+
+STEP 3: Set the NMEA statement output frequency to RMC and GGA
+CMD: $PGKC242,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*37
+
+uint32_t sim868_gps_init(){
+	if (send_pmtk_cmd("$PGKC115,1,0,0,0*2B\r\n", sizeof("$PGKC115,1,0,0,0*2B\r\n"),"$PGKC001,115,3,1,0,0,0,0,1*28",200)) {
+			debug_out("send only gps+glonass messages \r\n");
+		}
+
+	if (send_pmtk_cmd("$PGKC121,1,0,0,0*2c\r\n", sizeof("$PGKC121,1,0,0,0*2c\r\n"),"$PGKC001,121,3,1,0,0,0,0,0*2E",200)) {
+			debug_out("send only gps+glonass messages \r\n");
+		}
+
+	if (send_pmtk_cmd("$PGKC242,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*37\r\n", Sizeof("$PGKC242,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*37\r\n"),"$PGKC001,242,3*29",200)) {
+			debug_out("//output only RMC and GGA messages\r\n");
+		}
+
+	return 1;
+}
+
+
+  //  STEP: Set the star search mode to Gps and Glonass and save to flash
+  //  CMD: $PGKC121,1,1,0,0*2D
+    while(flag5){
+  	  sprintf(cmd,"$PGKC121,1,1,0,0*2D\r\n");
+  	  HAL_UART_Transmit(&huart3,(uint8_t *)cmd,strlen(cmd),1000);
+  	  HAL_UART_Receive (&huart3, (uint8_t *)buf, 100,1000);
+
+  	  if(strstr((char *)buf,"$PGKC001,121,3,1,1,0,0,0,0*2F")){
+  	    flag5=0;
+  	  }
+  	  HAL_UART_Transmit (&huart1, (uint8_t *)buf, 100,1000);
+  	  HAL_Delay(1000);
+}
+    memset(buf,0,sizeof(buf));
+
+  //  STEP: Initialise Gps and glonass
+
+while(flag4){
+	  sprintf(cmd,"$PGKC115,1,1,0,0*2A\r\n");
+	  HAL_UART_Transmit(&huart3,(uint8_t *)cmd,strlen(cmd),1000);
+	  HAL_UART_Receive (&huart3, (uint8_t *)buf, 100,1000);
+
+	  if(strstr((char *)buf,"$PGKC001,115,3,1,1,0,0,0,3*2B")){
+	    flag4=0;
+	  }
+	  HAL_UART_Transmit (&huart1, (uint8_t *)buf, 100,1000);
+	  HAL_Delay(1000);
+  }
+  memset(buf,0,sizeof(buf));

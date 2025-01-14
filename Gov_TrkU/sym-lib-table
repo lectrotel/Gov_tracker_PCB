@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Lectrobell_2.0.1-eagle-import")(type "Legacy")(uri "C:/Users/hp user/Documents/KiCad Designs/Lectrobell 2.0.4/Lectrobell_2.0.1-eagle-import.lib")(options "")(descr ""))
+  (lib (name "Lectrobell-2.0.1-rescue")(type "Legacy")(uri "C:/Users/hp user/Documents/KiCad Designs/Lectrobell 2.0.4/Lectrobell 2.0.1-rescue.lib")(options "")(descr ""))
+  (lib (name "Solar-Pump-power-Meter-rescue")(type "Legacy")(uri "C:/Users/hp user/Downloads/Compressed/PCB-20210526T064115Z-001/PCB/Solar Pump power Meter-rescue.lib")(options "")(descr ""))
+  (lib (name "Gov_Tracker-rescue")(type "KiCad")(uri "${KIPRJMOD}/Gov_Tracker-rescue.kicad_sym")(options "")(descr ""))
+)
