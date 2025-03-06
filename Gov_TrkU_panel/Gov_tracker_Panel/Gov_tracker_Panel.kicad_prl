@@ -37,6 +37,7 @@
       8,
       9,
       10,
+      11,
       13,
       15,
       16,
@@ -63,7 +64,7 @@
       40
     ],
     "visible_layers": "fffffff_80000001",
-    "zone_display_mode": 1
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "Gov_tracker_Panel.kicad_prl",
