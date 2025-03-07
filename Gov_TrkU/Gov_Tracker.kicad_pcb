@@ -4107,7 +4107,7 @@
     (property "ki_keywords" "fiducial marker")
     (path "/433c3647-3173-4b55-b9ef-1138ef48d4d1/60091ca2-ddfa-46bf-baed-c634a3b9595b")
     (attr smd)
-    (fp_text reference "FID2" (at 0 -2.54) (layer "F.SilkS")
+    (fp_text reference "FID2" (at 0 -2.54) (layer "F.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp b6f89e53-e59f-401e-ae43-78f172d9645c)
     )
@@ -4675,7 +4675,7 @@
     (property "ki_keywords" "fiducial marker")
     (path "/433c3647-3173-4b55-b9ef-1138ef48d4d1/337250d2-1062-4597-87b3-7f75fb04e6cc")
     (attr smd)
-    (fp_text reference "FID1" (at 0 -2.54) (layer "F.SilkS")
+    (fp_text reference "FID1" (at 0 -2.54) (layer "F.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp fcb4b89f-bf3e-4d65-ac5f-f09f3d4831a3)
     )
@@ -9685,7 +9685,7 @@
     (property "ki_keywords" "fiducial marker")
     (path "/433c3647-3173-4b55-b9ef-1138ef48d4d1/955eedae-d922-43d3-b1d2-a1209e587c30")
     (attr smd)
-    (fp_text reference "FID6" (at 0 2) (layer "B.SilkS")
+    (fp_text reference "FID6" (at 0 2) (layer "B.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 8e65d598-c19f-40cf-8692-9032079aeb74)
     )
@@ -11720,7 +11720,7 @@
     (property "ki_keywords" "fiducial marker")
     (path "/433c3647-3173-4b55-b9ef-1138ef48d4d1/7bb723e5-dc79-452f-b2bb-be18ad991ec8")
     (attr smd)
-    (fp_text reference "FID5" (at 0 2) (layer "B.SilkS")
+    (fp_text reference "FID5" (at 0 2) (layer "B.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp a6de2482-5daf-4436-baf4-4fa9c0f64fe1)
     )
@@ -42164,7 +42164,7 @@
       )
     )
   )
-  (group "" (id 72b0f4be-18a9-4842-9496-1feffa67924e)
+  (group "" (id 95bcc70e-c661-41f2-941c-6a83b5ddd0ba)
     (members
       0008ad96-9d2c-4335-9a1c-9a74e0a4724c
       001d9791-a181-4a9f-a549-7daf6efce688
